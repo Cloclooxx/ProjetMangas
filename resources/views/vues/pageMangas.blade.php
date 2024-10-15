@@ -7,29 +7,35 @@
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>Id</th>
                 <th>Titre</th>
+                <th>Genre</th>
+                <th>Dessinateur</th>
+                <th>Scénariste</th>
                 <th>Prix</th>
                 <th>Couverture</th>
-                <th>Libelé</th>
-                <th>Nom du dessinateur</th>
-                <th>Nom du scénariste</th>
+                <th><span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top"/></th>
+                <th><span class="glyphicon glyphicon-trash" data-toggle="tooltip" data-placement="top"/></th>
             </tr>
             </thead>
             @foreach($mangas as $manga)
                 <tr>
-                    <td> {{ $manga->id_manga }}</td>
                     <td> {{ $manga->titre }}</td>
-                    <td> {{ $manga->prix }}</td>
-                    <td> {{ $manga->couverture }}</td>
                     <td> {{ $manga->lib_genre }}</td>
                     <td> {{ $manga->nom_dessinateur }}</td>
                     <td> {{ $manga->nom_scenariste }}</td>
+                    <td> {{ $manga->prix }}</td>
+                    <td><img class="img-rounded" src="{{url('/assets/images/'.$manga->couverture)}}" alt="image manga" height="200px"/></td>
                     <td style="text-align: center">
                         <a href="{{ url('/')}}">
                             <span class="glyphicon glyphicon-pencil"
                                   data-toggle="tooltip" data-placement="top" title="Modifier">
-
+                            </span>
+                        </a>
+                    </td>
+                    <td style="text-align: center">
+                        <a href="{{ url('/')}}">
+                            <span class="glyphicon glyphicon-trash"
+                                  data-toggle="tooltip" data-placement="top" title="Supprimer">
                             </span>
                         </a>
                     </td>
@@ -38,3 +44,4 @@
             <BR> <BR>
         </table>
     </div>
+@stop

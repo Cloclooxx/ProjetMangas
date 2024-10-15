@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/listerMangas', [MangaController::class, 'listerMangas']);
+
+Route::get('/ajouterManga', "App\Http\Controllers\MangaController@ajouterManga");
+
+Route::post('/validerManga', "App\Http\Controllers\MangaController@validerManga")->name('postManga');
