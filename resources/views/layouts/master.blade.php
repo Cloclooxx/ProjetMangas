@@ -24,9 +24,9 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse-target">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url("/listerMangas") }}">Lister</a></li>
-                    <li><a href="{{ url("/MangasParGenre") }}">Mangas par genre</a></li>
-                    <li><a href="{{ url("/ajouterManga") }}">Ajouter</a></li>
+                    <li><a href="{{ route("mangas") }}">Lister</a></li>
+                    <li><a href="{{ route("selGenre") }}">Mangas par genre</a></li>
+                    <li><a href="{{ route("ajoutManga") }}">Ajouter</a></li>
                 </ul>
             </div>
         </div>
